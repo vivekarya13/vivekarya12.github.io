@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Scheduling Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <h1 class="text-4xl font-bold text-center mb-8 text-indigo-600">OS Scheduling Visualizer</h1>
+
+        <!-- Algorithm Selection -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Select Algorithm</h2>
+            <select id="algorithm" class="w-full p-2 border rounded-md">
+                <option value="fcfs">First Come First Serve (FCFS)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="srtf">Shortest Remaining Time First (SRTF)</option>
+                <option value="rr">Round Robin (RR)</option>
+            </select>
+            <div id="timeQuantumDiv" class="mt-4 hidden">
+                <label class="block mb-2">Time Quantum:</label>
+                <input type="number" id="timeQuantum" min="1" value="2" class="w-full p-2 border rounded-md">
+            </div>
+        </div>
+
+        <!-- Job Input Section -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Job Details</h2>
+            <div class="mb-4">
+                <label class="block mb-2">Number of Jobs:</label>
+                <input type="number" id="jobCount" min="1" value="3" class="w-full p-2 border rounded-md">
+            </div>
+            <div id="jobInputs" class="space-y-4"></div>
+            <button onclick="generateJobInputs()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Generate Job Inputs</button>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="mb-8 flex space-x-4 justify-center">
+            <button onclick="runSelected()" class="bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600">Run Selected</button>
+            <button onclick="runAll()" class="bg-purple-500 text-white px-6 py-3 rounded-md hover:bg-purple-600">Run All</button>
+            <button onclick="clearAll()" class="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600">Clear All</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="space-y-8"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
