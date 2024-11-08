@@ -676,8 +676,6 @@ function createGanttChart(results, containerId) {
 
             // Add container for Gantt chart
             const ganttContainer = document.createElement('div');
-            ganttContainer.className = 'w-full h-[300px] border rounded-lg';
-            container.appendChild(ganttContainer);
 
             document.getElementById('results').appendChild(container);
 
