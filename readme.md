@@ -16,11 +16,12 @@ The OS Scheduling Visualizer is an interactive web application that demonstrates
    - HTML5
    - JavaScript (ES6+)
    - Three.js for 3D visualization
+   - Tailwind CSS for webpage designing
 
 2. **Development Tools**
-   - Visual Studio Code (recommended editor)
+   - Visual Studio Code 
    - Git for version control
-   - Node.js (optional, for local development server)
+   - Node.js (for local development server)
 
 ## Project Structure:
 ```
@@ -73,7 +74,7 @@ os-scheduler-visualizer/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/os-scheduling-visualizer.git
+   git clone https://github.com/vivekarya13/vivekarya12.github.io.git
    cd os-scheduling-visualizer
    ```
 
@@ -85,7 +86,7 @@ os-scheduler-visualizer/
    # If you have Python 2 installed
    python -m SimpleHTTPServer 8000
    ```
-   Then open http://localhost:8000 in your browser
+   Then open http://localhost:8000 on your browser
 
 3. **Using Node.js**
    ```bash
@@ -104,9 +105,10 @@ os-scheduler-visualizer/
    - Browser will open automatically
 
 ### Accessing the Deployed Version
-1. Visit [https://os-scheduling-visualizer.herokuapp.com](https://os-scheduling-visualizer.herokuapp.com)
+1. Visit https://vivekarya13.github.io/vivekarya12.github.io
 2. No installation required
-3. Works on all modern browsers
+
+Please note that we have hosted on github on a temporary basis for demonstration purposes only and may be removed later on. However, the github repository will still host the project (if the repository location is changed then the changes will be notified accordingly) so one can download the project and can host it either locally or on deployment sites like Heroku or Netlify.
 
 ### Usage Instructions
 1. Select a scheduling algorithm from the dropdown
@@ -119,6 +121,3 @@ os-scheduler-visualizer/
 
 ## Contributing
 Feel free to fork this repository and submit pull requests. You can also open issues for bugs or feature suggestions.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
